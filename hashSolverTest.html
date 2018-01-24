@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="text/javascript" src="./hashSolverTest.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <title>Document</title>
+</head>
+
+<body>
+
+  <section>
+    <h1>Hash Solver Teste</h1>
+
+    <div class="dropdown">
+      <button class="dropbtn">Hash Level</button>
+      <div class="dropdown-content">
+        <a onclick="level1()" href="#">Hash Level 1</a>
+        <a onclick="level2()" href="#">Hash Level 2</a>
+        <a onclick="level3()" href="#">Hash Level 3</a>
+        <a onclick="level4()" href="#">Hash Level 4</a>
+      </div>
+    </div>
+
+    <h4 id="LevelScore"> - </h4>
+
+    <input type="text" id="msgInput" onfocus="this.value=''" placeholder="Input inicial (opc)">
+
+    <button class="dropbtn" id="runbtn" onclick="clearRes(); load(); solveHash()">Run</button>
+
+  </section>
+
+  <h5 id="load">Loading...</h5>
+
+  <div>
+    <span>Hash: </span>
+    <h4 id="hashResult"></h4>
+    <span>Tentativas: </span>
+    <h4 id="trys"></h4>
+    <span>Input Final: </span>
+    <h6 id="msgResult"></h6>
+  </div>
+
+
+</body>
+
+</html>
