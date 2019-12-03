@@ -264,6 +264,7 @@ window.onload = function(){
 
 let msg = "Shutdown Ends as Trump Signs Bill";
 let hash = md5(msg);
+console.log(md5('yes lawd'))
 var regExp = /^0[0-9].*$/;
 let res = 0;
 
@@ -277,9 +278,6 @@ function solveHash() {
         msg = msg + randomnumber;
         hash = md5(msg);
         if (regExp.test(hash) == true) {
-            console.log(i);
-            console.log(hash);
-            console.log(msg);
             res = 1;
             showResult();
             // alert("12.5 Bitcoins added")
@@ -311,12 +309,10 @@ function getMsg() {
 }
 
 function load(){
-    console.log("loading");
-    document.getElementById("load").style.display = "flex";    
+    document.getElementById("load").style.display = "flex";
 }
 
 function clearRes(){
-    console.log("clear");
     document.getElementById("hashResult").innerHTML = "";
     document.getElementById("trys").innerHTML = "";
     document.getElementById("msgResult").innerHTML = "";
